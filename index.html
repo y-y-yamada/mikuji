@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>背景が変わるおみくじ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PWA設定 -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon"
+        href="./icons/icon-180.png">
+
+    <meta name="theme-color" content="#336699">
+        <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div id="splash"></div>
+
+    <div class="omikuji">
+        <h1>おみくじ</h1>
+
+
+        <button id="draw">おみくじを引く</button>
+
+        <p id="result">今日の運勢は</p>
+
+    </div>
+
+    <!-- Service Worker登録 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register(
+                    './service-worker.js'
+                );
+            });
+        }
+    </script>
+
+</body>
+</html>

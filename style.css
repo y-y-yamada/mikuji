@@ -1,0 +1,60 @@
+body {
+    background-color: #f5f5f5;
+    background-image: url(images/image1.jpg);
+    transition: background-image 3s ease-in-out;
+}
+
+.omikuji {
+    width: 300px;
+    height:300px;
+    margin: 100px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    background-image: url(images/torii.png);
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position:center;
+    border-radius:20px;
+}
+
+
+.omikuji h1{
+    color:#ffccff;
+    text-shadow:#000000 3px 3px;
+}
+
+#result {
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#result.hide{
+    opacity: 0;
+}
+
+#result.red{
+    color:#FF0000;
+}
+
+button {
+    padding: 10px 30px;
+    background-color:#FFFFFF;
+    border-radius:20px;
+    box-shadow:0 3px 3px 0;
+}
+
+#splash {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s;
+}
+
+#splash.show {
+    opacity: 1;
+}
